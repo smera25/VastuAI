@@ -1,0 +1,73 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Environment variables and API keys
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.local.example
+
+# Frontend environment files
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.production.local
+
+# Python secrets and configuration
+secrets.json
+credentials.json
+serviceAccountKey.json
+*.pem
+*.key
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+coverage/
+
+# Python and testing
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+
+# IDE and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+npm-debug.log*
+temp/
+tmp/
+
+# Local databases and uploaded files
+*.sqlite
+*.sqlite3
+instance/
+
+# Large model files
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# Local Python configuration
+pip-wheel-metadata/
+
+# Local room uploads and generated results
+data/jobs/
+data/redesigns/
+data/visualizations/
+response.json

@@ -1,0 +1,11 @@
+[
+  {"id": "tv-zone", "enabled": false},
+  {"id": "bed-head-direction", "preferred": ["south", "east", "west"], "consensus": "Customised: this deployment also accepts west."},
+  {
+    "id": "pooja-corner-zone", "title": "Prayer / meditation corner zone", "category": "vastu",
+    "rooms": ["*"], "items": ["other"], "kind": "item_zone",
+    "preferred": ["north_east", "east", "north"], "avoid": ["south_west"],
+    "reason": "Prayer or meditation spaces are traditionally placed toward the north-east.",
+    "consensus": "Commonly cited."
+  }
+]

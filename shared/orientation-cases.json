@@ -1,0 +1,45 @@
+{
+  "_comment": "Hand-written ground truth for the orientation mapping. Plan is a bird's-eye view; compass order around the room is clockwise. Shared by the Python (pytest) and JavaScript (vitest) suites so both implementations must agree. Do NOT generate these from code.",
+  "top_edge_cases": [
+    { "top": "north", "right": "east",  "bottom": "south", "left": "west",  "north_edge": "top",    "north_arrow_degrees": 0 },
+    { "top": "east",  "right": "south", "bottom": "west",  "left": "north", "north_edge": "left",   "north_arrow_degrees": 270 },
+    { "top": "south", "right": "west",  "bottom": "north", "left": "east",  "north_edge": "bottom", "north_arrow_degrees": 180 },
+    { "top": "west",  "right": "north", "bottom": "east",  "left": "south", "north_edge": "right",  "north_arrow_degrees": 90 }
+  ],
+  "facing_cases": [
+    { "facing": "north", "facing_edge": "top",    "expected_top": "north" },
+    { "facing": "east",  "facing_edge": "top",    "expected_top": "east" },
+    { "facing": "south", "facing_edge": "top",    "expected_top": "south" },
+    { "facing": "west",  "facing_edge": "top",    "expected_top": "west" },
+    { "facing": "east",  "facing_edge": "right",  "expected_top": "north" },
+    { "facing": "east",  "facing_edge": "bottom", "expected_top": "west" },
+    { "facing": "east",  "facing_edge": "left",   "expected_top": "south" },
+    { "facing": "north", "facing_edge": "bottom", "expected_top": "south" },
+    { "facing": "south", "facing_edge": "right",  "expected_top": "east" },
+    { "facing": "west",  "facing_edge": "left",   "expected_top": "north" }
+  ],
+  "zone_room": { "width": 4.0, "length": 3.0 },
+  "zone_cases": [
+    { "point": [0.5, 2.5], "by_top": { "north": "north_west", "east": "north_east", "south": "south_east", "west": "south_west" } },
+    { "point": [3.5, 0.5], "by_top": { "north": "south_east", "east": "south_west", "south": "north_west", "west": "north_east" } },
+    { "point": [3.5, 2.5], "by_top": { "north": "north_east", "east": "south_east", "south": "south_west", "west": "north_west" } },
+    { "point": [0.5, 0.5], "by_top": { "north": "south_west", "east": "north_west", "south": "north_east", "west": "south_east" } },
+    { "point": [2.0, 2.8], "by_top": { "north": "north", "east": "east", "south": "south", "west": "west" } },
+    { "point": [3.8, 1.5], "by_top": { "north": "east", "east": "south", "south": "west", "west": "north" } },
+    { "point": [2.0, 0.2], "by_top": { "north": "south", "east": "west", "south": "north", "west": "east" } },
+    { "point": [0.2, 1.5], "by_top": { "north": "west", "east": "north", "south": "east", "west": "south" } },
+    { "point": [2.0, 1.5], "by_top": { "north": "center", "east": "center", "south": "center", "west": "center" } }
+  ],
+  "heading_cases": [
+    { "heading": 0,   "cardinal": "north" },
+    { "heading": 44,  "cardinal": "north" },
+    { "heading": 45,  "cardinal": "east" },
+    { "heading": 92,  "cardinal": "east" },
+    { "heading": 135, "cardinal": "south" },
+    { "heading": 200, "cardinal": "south" },
+    { "heading": 270, "cardinal": "west" },
+    { "heading": 315, "cardinal": "north" },
+    { "heading": 359, "cardinal": "north" },
+    { "heading": 360, "cardinal": "north" }
+  ]
+}

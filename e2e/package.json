@@ -1,0 +1,8 @@
+{
+  "name": "vastu-e2e",
+  "private": true,
+  "type": "module",
+  "description": "Optional end-to-end browser tests (headless Chrome via puppeteer-core). Needs the backend on :8000 and the built frontend on :5173.",
+  "scripts": { "e2e": "node e2e.mjs", "e2e:mobile": "MOBILE=1 node e2e.mjs", "camera": "node camera.mjs" },
+  "dependencies": { "@sparticuz/chromium": "*", "puppeteer-core": "*" }
+}
